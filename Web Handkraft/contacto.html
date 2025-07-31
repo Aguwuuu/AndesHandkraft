@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contacto - Andes HandKraft</title>
+
+  <!-- Íconos Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Fuentes de Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display&display=swap" rel="stylesheet" />
+  
+  <!-- Tu hoja de estilos -->
+  <link rel="stylesheet" href="estilos.css" />
+  
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      background-color: #fdfdfd;
+      color: #333;
+      position: relative;
+      overflow-x: hidden;
+    }
+    /* Logo arriba derecha en esquina */
+    .logo {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 200px;
+      height: auto;
+      z-index: 1000;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .logo:hover {
+      transform: scale(1.1);
+    }
+
+    header h1 {
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      animation: fadeInDown 1s ease forwards;
+      opacity: 0;
+    }
+
+    nav {
+      text-align: center;
+      margin-bottom: 25px; /* más reducido */
+      animation: fadeInUp 1s ease forwards;
+      opacity: 0;
+      animation-delay: 0.5s;
+      animation-fill-mode: forwards;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: #555;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #c59d5f;
+    }
+
+    nav a.active {
+      text-decoration: underline;
+      color: #000;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px 10px; /* menos padding inferior */
+    }
+
+    .contacto h2 {
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      margin-bottom: 8px;
+      animation: fadeIn 1s ease forwards;
+      opacity: 0;
+      animation-delay: 1s;
+    }
+
+    .contacto p {
+      text-align: center;
+      margin-bottom: 8px; /* mucho menos margen */
+      animation: fadeIn 1s ease forwards;
+      opacity: 0;
+      animation-delay: 1.2s;
+    }
+
+    .contacto ul {
+      list-style: none;
+      padding: 0;
+      font-size: 1.1rem;
+      line-height: 2;
+      animation: fadeIn 1s ease forwards;
+      opacity: 0;
+      animation-delay: 1.4s;
+    }
+
+    .contacto ul li {
+      margin-bottom: 10px;
+    }
+
+    .contacto a {
+      text-decoration: none;
+      color: inherit;
+      transition: color 0.3s ease;
+    }
+
+    .contacto a:hover {
+      color: #c59d5f;
+    }
+
+    .contacto i {
+      margin-right: 8px;
+      color: #c59d5f;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #999;
+      background-color: #f4f4f4;
+    }
+
+    /* Frase inspiradora */
+    .frase-inspiradora {
+      text-align: center;
+      margin: 10px auto 20px; /* apenas margen superior */
+      font-size: 1.3rem;
+      color: #5a4230;
+      font-style: italic;
+      max-width: 700px;
+      padding: 0 20px;
+      position: relative;
+      animation: pulse 3s infinite ease-in-out;
+    }
+
+    .frase-inspiradora i {
+      color: #c59d5f;
+      margin-right: 8px;
+      animation: pulse 3s infinite ease-in-out;
+    }
+
+    /* Animaciones */
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 0.8; }
+      50% { transform: scale(1.1); opacity: 1; }
+    }
+
+    @keyframes fadeInDown {
+      0% { opacity: 0; transform: translateY(-20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .logo {
+        width: 70px;
+        top: 8px;
+        right: 8px;
+      }
+      header h1 {
+        font-size: 2rem;
+      }
+      .contacto h2 {
+        font-size: 1.7rem;
+      }
+      .frase-inspiradora {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Logo fijo arriba derecha -->
+  <img src="imagenes/logo.png" alt="Logo Andes HandKraft" class="logo" />
+
+  <!-- ENCABEZADO -->
+  <header>
+    <div class="container">
+      <h1>Contáctanos - Andes HandKraft</h1>
+      <nav>
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Productos</a>
+        <a href="contacto.html" class="active">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- SECCIÓN DE CONTACTO -->
+  <section id="contacto" class="contacto">
+    <div class="container">
+      <h2>Estamos para ayudarte</h2>
+      <p>¿Quieres una tabla a medida o tienes alguna consulta? Escríbenos o llámanos y te asesoramos con mucho gusto.</p>
+      
+      <ul>
+        <li>
+          <a href="https://wa.me/56984820828" target="_blank" style="text-decoration: none; color: inherit;">
+            <i class="fab fa-whatsapp"></i> WhatsApp: +56 9 8482 0828
+          </a>
+        </li>
+        
+        <li>
+          <a href="mailto:andeshandkraft@gmail.com" target="_blank" style="text-decoration: none; color: inherit;">
+            <i class="fas fa-envelope"></i> andeshandkraft@gmail.com
+          </a>
+        </li>
+
+        <li>
+          <a href="https://www.facebook.com/pepaguirreahk/" target="_blank" style="text-decoration: none; color: inherit;">
+            <i class="fab fa-facebook"></i> Facebook: @pepaguirreahk
+          </a>
+        </li>
+
+        <li>
+          <a href="https://www.instagram.com/pepaguirreahk" target="_blank" style="text-decoration: none; color: inherit;">
+            <i class="fab fa-instagram"></i> Instagram: @pepaguirreahk
+          </a>
+        </li>
+
+        <li>
+          <a href="https://www.google.com/maps/place/San+Esteban,+Valparaíso,+Chile" target="_blank" style="text-decoration: none; color: inherit;">
+            <i class="fas fa-map-marker-alt"></i> San Esteban, Valparaíso, Chile
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- FRASE INSPIRADORA -->
+  <div class="frase-inspiradora">
+    <i class="fas fa-leaf"></i> "Cada tabla cuenta una historia tallada a mano con pasión."
+  </div>
+
+  <!-- PIE DE PÁGINA -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Andes HandKraft. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
+
+
+
+
+

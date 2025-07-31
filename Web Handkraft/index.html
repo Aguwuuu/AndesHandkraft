@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Inicio - Andes HandKraft</title>
+  <link rel="stylesheet" href="estilos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display&display=swap" rel="stylesheet" />
+  
+  <style>
+    body {
+      background-color: #222;
+      margin: 0;
+      color: white;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    header .container {
+      position: relative;
+      padding-top: 20px;
+      padding-bottom: 10px;
+      text-align: center;
+    }
+
+    /* Logos */
+    .logo-right, .logo-left {
+      position: absolute;
+      top: -20px;
+      width: 245px;
+      height: auto;
+      opacity: 0;
+      animation: fadeIn 1s ease-out 0.2s forwards;
+    }
+
+    .logo-right { right: -211px; }
+    .logo-left { left: -211px; }
+
+    /* Animaciones */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 2.7rem;
+      color: white;
+      letter-spacing: 2px;
+      margin: 0 0 5px 0;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+      display: inline-block;
+      position: relative;
+      z-index: 1;
+      opacity: 0;
+      animation: fadeInUp 1s ease-out 0.4s forwards;
+    }
+
+    .pyramid-lines {
+      margin: 5px auto 10px auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3px;
+      opacity: 0;
+      animation: fadeInUp 1s ease-out 0.7s forwards;
+    }
+
+    .pyramid-lines span {
+      height: 2px;
+      background-color: white;
+      opacity: 0.7;
+      border-radius: 1px;
+    }
+
+    .line1 { width: 80px; }
+    .line2 { width: 60px; }
+    .line3 { width: 40px; }
+    .line4 { width: 20px; }
+
+    nav {
+      margin-top: 10px;
+      opacity: 0;
+      animation: fadeInUp 1s ease-out 1s forwards;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #d4a373;
+    }
+
+    /* Hero section */
+    #inicio .container h2 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 2rem;
+      color: white;
+      margin-bottom: 0.5rem;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+      opacity: 0;
+      animation: fadeInUp 1s ease-out 1.3s forwards;
+    }
+
+    #inicio .container p {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      font-size: 1.2rem;
+      color: white;
+      max-width: 700px;
+      margin-bottom: 1.5rem;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+      margin-left: auto;
+      margin-right: auto;
+      opacity: 0;
+      animation: fadeInUp 1s ease-out 1.6s forwards;
+    }
+
+    a.btn {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      background-color: #4a3c31;
+      color: white;
+      padding: 10px 25px;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+      opacity: 0;
+      animation: fadeInUp 1s ease-out 1.9s forwards;
+      display: inline-block;
+    }
+
+    a.btn:hover {
+      background-color: #6e5b4a;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <img src="imagenes/logo.png" alt="Logo Andes HandKraft" class="logo-left" />
+      <img src="imagenes/logo.png" alt="Logo Andes HandKraft" class="logo-right" />
+      <h1>Andes HandKraft</h1>
+      <div class="pyramid-lines">
+        <span class="line1"></span>
+        <span class="line2"></span>
+        <span class="line3"></span>
+        <span class="line4"></span>
+      </div>
+      <nav>
+        <a href="index.html" class="active">Inicio</a>
+        <a href="servicios.html">Productos</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="inicio" class="hero">
+    <div class="container">
+      <h2>Tablas de madera únicas, hechas a mano especialmente para ti</h2>
+      <p>En Andes HandKraft somos una pyme dedicada a crear tablas de madera personalizadas, desde roble hasta ciprés, diseñadas para cada cliente con dedicación artesanal y calidad superior, únicas en todo el valle del Aconcagua.</p>
+      <a href="servicios.html" class="btn">Ver nuestros productos</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Andes HandKraft. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>
+
